@@ -122,6 +122,68 @@
     </section>
     <!-- project end -->
 
+    <!-- gallery -->
+    <section id="gallery">
+      <div class="container">
+        <div class="row text-center mb-3">
+          <h2>Gallery</h2>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-md-3">
+            <a href="#">
+              <img src="img/gallery/thumbnail/1.jpg" alt="gambar-1" class="img-fluid" id="gallery-img">
+            </a>
+          </div>
+          <div class="col-md-3">
+            <a href="#">
+              <img src="img/gallery/thumbnail/2.jpg" alt="gambar-2" class="img-fluid" id="gallery-img">
+            </a>
+          </div>
+          <div class="col-md-3">
+            <a href="#">
+              <img src="img/gallery/thumbnail/3.jpg" alt="gambar-3" class="img-fluid" id="gallery-img">
+            </a>
+          </div>
+          <div class="col-md-3">
+            <a href="#">
+              <img src="img/gallery/thumbnail/4.jpg" alt="gambar-4" class="img-fluid" id="gallery-img">
+            </a>
+          </div>
+          <div class="col-md-3">
+            <a href="#">
+              <img src="img/gallery/thumbnail/5.jpg" alt="gambar-5" class="img-fluid" id="gallery-img">
+            </a>
+          </div>
+          <div class="col-md-3">
+            <a href="#">
+              <img src="img/gallery/thumbnail/6.jpg" alt="gambar-6" class="img-fluid" id="gallery-img">
+            </a>
+          </div>
+          <div class="col-md-3">
+            <a href="#">
+              <img src="img/gallery/thumbnail/7.jpg" alt="gambar-7" class="img-fluid" id="gallery-img">
+            </a>
+          </div>
+          <div class="col-md-3">
+            <a href="#">
+              <img src="img/gallery/thumbnail/8.jpg" alt="gambar-8" class="img-fluid" id="gallery-img">
+            </a>
+          </div>
+          <div class="col-md-3">
+            <a href="#">
+              <img src="img/gallery/thumbnail/9.jpg" alt="gambar-9" class="img-fluid" id="gallery-img">
+            </a>
+          </div>
+          <div class="col-md-3">
+            <a href="#">
+              <img src="img/gallery/thumbnail/10.jpg" alt="gambar-10" class="img-fluid" id="gallery-img">
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- gallery end -->
+
     <!-- form contact -->
     <section id="contact">
       <div class="container">
@@ -165,6 +227,14 @@
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
+      const galleryiImage = document.querySelectorAll('#gallery-img');
+
+      galleryiImage.forEach((img, i) => {
+        img.dataset.aos = 'fade down';
+        img.dataset.aosDelay = i * 100;
+        img.dataset.aosDuration = 1000;
+      });
+
       AOS.init({
         once: true,
       });
